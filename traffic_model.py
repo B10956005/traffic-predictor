@@ -39,8 +39,8 @@ def load_data(volume_path, speed_path, holidays):
     global df_model, holiday_dates
     holiday_dates = set(holidays)
 
-    volume_df = pd.read_excel(volume_path)
-    speed_df = pd.read_excel(speed_path)
+    volume_df = pd.read_csv(volume_path)
+    speed_df = pd.read_csv(speed_path)
 
     volume_df["時間"] = pd.to_datetime(volume_df["十分鐘"]).dt.floor("10min")
     speed_df["時間"] = pd.to_datetime(speed_df["DataCollectTime"]).dt.floor("10min").dt.tz_localize(None)
