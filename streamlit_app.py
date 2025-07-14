@@ -17,8 +17,8 @@ st.title("🚗 國道交通壅塞預測 (2025~2028)")
 # === 上傳或指定檔案路徑 ===
 with st.sidebar:
     st.header("📂 資料設定")
-    volume_path = st.text_input("輸入車流量檔案路徑", value="vehicle_summary_10min_south.xlsx")
-    speed_path = st.text_input("輸入速率資料檔案路徑", value="修正後_TravelSpeed_southV2.xlsx")
+    volume_path = st.text_input("輸入車流量檔案路徑", value="vehicle_summary_10min_south.csv")
+    speed_path = st.text_input("輸入速率資料檔案路徑", value="修正後_TravelSpeed_southV2.csv")
 
     if st.button("載入與訓練模型"):
         with st.spinner("載入與訓練中..."):
